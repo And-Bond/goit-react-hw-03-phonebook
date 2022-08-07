@@ -25,7 +25,7 @@ class Filter extends Component {
           onChange={onChange}
         />
 
-        {contacts.map(contact => {
+        {contacts?.map(contact => {
           if (!value) {
             return null;
           }

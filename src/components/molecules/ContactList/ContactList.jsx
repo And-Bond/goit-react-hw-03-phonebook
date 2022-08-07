@@ -17,7 +17,7 @@ class Contacts extends Component {
     
     return (
       <>
-        {contacts.map(contact => {
+        {contacts?.map(contact => {
           if (filterValue) {
             return null;
           }
