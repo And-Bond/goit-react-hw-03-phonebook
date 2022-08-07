@@ -6,7 +6,7 @@ import { nanoid } from 'nanoid';
 import styled from 'styled-components';
 export class App extends Component {
   state = {
-    contacts: [],
+    contacts: [{name: 'This. is your contact menu', number: ' this is your phone menu', id: nanoid()}],
     filter: '',
   };
   componentDidMount(){
