@@ -33,7 +33,7 @@ export class App extends Component {
     if (data.name === '' || data.number === '') {
       return;
     }
-    this.state.contacts.map(contact => {
+    this.state.contacts?.map(contact => {
       if (contact.name === data.name) {
         alert(`${data.name} is already at contacts`);
         return (isInclude = true);
