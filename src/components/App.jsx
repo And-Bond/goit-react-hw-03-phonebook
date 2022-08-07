@@ -41,7 +41,7 @@ export class App extends Component {
       return null
     });
     if (!isInclude) {
-      if(this.state.contacts.lenght === 0){
+      if(!this.state.contacts){
         this.setState({
           contacts: this.state.contacts.push({ name: data.name, number: data.number, id: nanoid() })
         });
