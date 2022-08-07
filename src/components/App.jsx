@@ -43,8 +43,9 @@ export class App extends Component {
     if (!isInclude) {
       if(!this.state.contacts){
         this.setState({
-          contacts: this.state.contacts.push({ name: data.name, number: data.number, id: nanoid() })
+          contacts: [{ name: data.name, number: data.number, id: nanoid() }]
         });
+        
       }
       else{
         this.setState({
