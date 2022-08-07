@@ -44,7 +44,7 @@ const ButtonStyled = styled.button`
   background-color: #fff;
 `
 Contacts.propTypes = {
-  contacts: proptypes.object,
+  contacts: proptypes.array,
   filterValue: proptypes.string
 }
 

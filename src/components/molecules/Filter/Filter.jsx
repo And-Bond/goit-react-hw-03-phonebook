@@ -79,7 +79,7 @@ const LiStyled = styled.li`
   margin-left: 10px;
 `
 Filter.propTypes = {
-  contacts: proptypes.object,
+  contacts: proptypes.array,
   value: proptypes.string,
   onChange: proptypes.func,
 };

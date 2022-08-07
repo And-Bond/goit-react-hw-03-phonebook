@@ -6,7 +6,7 @@ import { nanoid } from 'nanoid';
 import styled from 'styled-components';
 export class App extends Component {
   state = {
-    contacts: [{name: 'This. is your contact menu', number: ' this is your phone menu', id: nanoid()}],
+    contacts: [],
     filter: '',
   };
   componentDidMount(){
@@ -41,13 +41,20 @@ export class App extends Component {
       return null
     });
     if (!isInclude) {
-      this.setState({
-        contacts: [
-          ...this.state.contacts,
-          { name: data.name, number: data.number, id: nanoid() },
-        ],
-      });
-      console.log(this.state.contacts)
+      if(this.state.contacts.lenght === 0){
+        this.setState({
+          contacts: this.state.contacts.push({ name: data.name, number: data.number, id: nanoid() })
+        });
+      }
+      else{
+        this.setState({
+          contacts: [
+            ...this.state.contacts,
+            { name: data.name, number: data.number, id: nanoid() },
+          ],
+        });
+      }
+      
       setTimeout(() => {
         console.log(this.state.contacts)
         return localStorage.setItem('contacts', JSON.stringify(this.state.contacts))},1000)
